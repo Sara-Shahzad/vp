@@ -7,6 +7,3 @@ c:\users\sara shahzad\documents\visual studio 2013\Projects\Textmining\Textminin
 c:\users\sara shahzad\documents\visual studio 2013\Projects\Textmining\Textmining\obj\Debug\Textmining.csproj.GenerateResource.Cache
 c:\users\sara shahzad\documents\visual studio 2013\Projects\Textmining\Textmining\obj\Debug\Textmining.exe
 c:\users\sara shahzad\documents\visual studio 2013\Projects\Textmining\Textmining\obj\Debug\Textmining.pdb
-D:\vp\Textmining\Textmining\bin\Debug\Textmining.exe.config
-D:\vp\Textmining\Textmining\obj\Debug\Textmining.exe
-D:\vp\Textmining\Textmining\obj\Debug\Textmining.pdb

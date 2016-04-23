@@ -28,12 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btnadd = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.searchbox = new System.Windows.Forms.TextBox();
             this.path = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pdf = new AxAcroPDFLib.AxAcroPDF();
+            ((System.ComponentModel.ISupportInitialize)(this.pdf)).BeginInit();
             this.SuspendLayout();
             // 
             // btnadd
@@ -87,12 +90,23 @@
             this.button1.TabIndex = 5;
             this.button1.Text = "Search";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pdf
+            // 
+            this.pdf.Enabled = true;
+            this.pdf.Location = new System.Drawing.Point(12, 164);
+            this.pdf.Name = "pdf";
+            this.pdf.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("pdf.OcxState")));
+            this.pdf.Size = new System.Drawing.Size(523, 215);
+            this.pdf.TabIndex = 6;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(292, 277);
+            this.ClientSize = new System.Drawing.Size(555, 395);
+            this.Controls.Add(this.pdf);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.path);
@@ -101,6 +115,7 @@
             this.Controls.Add(this.btnadd);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pdf)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -114,6 +129,7 @@
         private System.Windows.Forms.TextBox path;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
+        private AxAcroPDFLib.AxAcroPDF pdf;
     }
 }
 
