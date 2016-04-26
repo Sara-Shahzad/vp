@@ -33,11 +33,11 @@ namespace Textmining
             {
                 this.path.Text = fd1.FileName;
                 file=this.path.Text;
-                
+                MessageBox.Show("Your file has been added.");
 
             }
-            String outfile = "D:\\file.pdf";
-            MessageBox.Show("Your file has been added.");
+            //String outfile = "D:\\file.pdf";
+            
             //Microsoft.Office.Interop.Word.Application app = new Microsoft.Office.Interop.Word.Application();
             //Document doc = null;
             //doc = app.Documents.Open(file , Type.Missing ,false);
@@ -59,11 +59,11 @@ namespace Textmining
             int count = document.Words.Count;
             for (int i = 1; i <= count; i++)
             {
-                Console.WriteLine(count);
+                //Console.WriteLine(count);
 
                
                 string text = document.Words[i].Text;
-                Console.WriteLine(text);
+                //Console.WriteLine(text);
                 if (text == a)
                 {
                     b++;

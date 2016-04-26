@@ -7,3 +7,18 @@ c:\users\sara shahzad\documents\visual studio 2013\Projects\Textmining\Textminin
 c:\users\sara shahzad\documents\visual studio 2013\Projects\Textmining\Textmining\obj\Debug\Textmining.csproj.GenerateResource.Cache
 c:\users\sara shahzad\documents\visual studio 2013\Projects\Textmining\Textmining\obj\Debug\Textmining.exe
 c:\users\sara shahzad\documents\visual studio 2013\Projects\Textmining\Textmining\obj\Debug\Textmining.pdb
+D:\vp\Textmining\Textmining\bin\Debug\Textmining.exe.config
+D:\vp\Textmining\Textmining\obj\Debug\Interop.AcroPDFLib.dll
+D:\vp\Textmining\Textmining\obj\Debug\Interop.UCAddinLib.dll
+D:\vp\Textmining\Textmining\obj\Debug\AxInterop.AcroPDFLib.dll
+D:\vp\Textmining\Textmining\obj\Debug\Textmining.csproj.ResolveComReference.cache
+D:\vp\Textmining\Textmining\bin\Debug\Textmining.exe
+D:\vp\Textmining\Textmining\bin\Debug\Textmining.pdb
+D:\vp\Textmining\Textmining\bin\Debug\Interop.AcroPDFLib.dll
+D:\vp\Textmining\Textmining\bin\Debug\AxInterop.AcroPDFLib.dll
+D:\vp\Textmining\Textmining\obj\Debug\Textmining.csprojResolveAssemblyReference.cache
+D:\vp\Textmining\Textmining\obj\Debug\Textmining.Form1.resources
+D:\vp\Textmining\Textmining\obj\Debug\Textmining.Properties.Resources.resources
+D:\vp\Textmining\Textmining\obj\Debug\Textmining.csproj.GenerateResource.Cache
+D:\vp\Textmining\Textmining\obj\Debug\Textmining.exe
+D:\vp\Textmining\Textmining\obj\Debug\Textmining.pdb
