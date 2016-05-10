@@ -12,6 +12,14 @@ namespace Textmining
     {
         public int SearchWord(string word, string path)
         {
+            string mydocc=mydoc(path);
+            
+            int no = Regex.Matches(mydocc, word,RegexOptions.IgnoreCase).Count;
+            return no;
+            
+        }
+        private string mydoc(string path)
+        {
             Microsoft.Office.Interop.Word.Application words = new Microsoft.Office.Interop.Word.Application();
             object miss = System.Reflection.Missing.Value;
             object readOnly = true;
@@ -24,9 +32,7 @@ namespace Textmining
             Console.WriteLine(totaltext);
             docs.Close();
             words.Quit();
-            int no = Regex.Matches(totaltext, word).Count;
-            return no;
-            
+            return totaltext;
         }
 
     }

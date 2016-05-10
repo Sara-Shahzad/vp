@@ -22,3 +22,4 @@ D:\vp\Textmining\Textmining\obj\Debug\Textmining.Properties.Resources.resources
 D:\vp\Textmining\Textmining\obj\Debug\Textmining.csproj.GenerateResource.Cache
 D:\vp\Textmining\Textmining\obj\Debug\Textmining.exe
 D:\vp\Textmining\Textmining\obj\Debug\Textmining.pdb
+D:\vp\Textmining\Textmining\obj\Debug\Textmining.Form2.resources

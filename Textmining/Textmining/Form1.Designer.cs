@@ -40,6 +40,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pdf)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -117,6 +118,7 @@
             this.Result.Location = new System.Drawing.Point(12, 281);
             this.Result.Multiline = true;
             this.Result.Name = "Result";
+            this.Result.ReadOnly = true;
             this.Result.Size = new System.Drawing.Size(550, 140);
             this.Result.TabIndex = 7;
             this.Result.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
@@ -138,9 +140,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.pictureBox1.ErrorImage = global::Textmining.Properties.Resources.black_search_icon_transparent_background;
             this.pictureBox1.InitialImage = global::Textmining.Properties.Resources.black_search_icon_transparent_background;
-            this.pictureBox1.Location = new System.Drawing.Point(132, 158);
+            this.pictureBox1.Location = new System.Drawing.Point(134, 158);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(19, 20);
+            this.pictureBox1.Size = new System.Drawing.Size(17, 20);
             this.pictureBox1.TabIndex = 8;
             this.pictureBox1.TabStop = false;
             // 
@@ -155,11 +157,24 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "TEXT MINING";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.Location = new System.Drawing.Point(432, 427);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(116, 37);
+            this.button2.TabIndex = 11;
+            this.button2.Text = "Get Semantics";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 433);
+            this.ClientSize = new System.Drawing.Size(571, 466);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -171,6 +186,7 @@
             this.Controls.Add(this.searchbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnadd);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Text Mining";
@@ -195,6 +211,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button2;
     }
 }
 

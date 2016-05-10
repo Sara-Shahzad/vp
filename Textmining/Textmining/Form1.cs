@@ -15,6 +15,7 @@ namespace Textmining
 {
     public partial class Form1 : Form
     {
+        Class1 c = new Class1();
         public Form1()
         {
             InitializeComponent();
@@ -52,7 +53,7 @@ namespace Textmining
         {
             String a = searchbox.Text;
             String paths = path.Text;
-            Class1 c=new Class1();
+            
 
             int num = c.SearchWord(a, paths);
             if(num>0)
@@ -74,6 +75,13 @@ namespace Textmining
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();
 
         }
     }
