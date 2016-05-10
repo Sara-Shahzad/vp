@@ -13,14 +13,16 @@ using System.Text.RegularExpressions;
 
 namespace Textmining
 {
+    
     public partial class Form1 : Form
     {
         Class1 c = new Class1();
+        
         public Form1()
         {
             InitializeComponent();
         }
-
+        
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -46,16 +48,14 @@ namespace Textmining
                 System.Runtime.InteropServices.Marshal.ReleaseComObject(app);
                 pdf.src = outfile;
                 MessageBox.Show("Your file has been added.");
+                c.mydoc(path.Text);
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             String a = searchbox.Text;
-            String paths = path.Text;
-            
-
-            int num = c.SearchWord(a, paths);
+            int num = c.SearchWord(a);
             if(num>0)
             {
                 string xyz = "Found...\n\n" + "number of times the KeyWord Appeared in the document is " + num+"...";
@@ -80,7 +80,12 @@ namespace Textmining
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form2 frm = new Form2();
+            c.getsemantics();
+            string pre = c.prefix;
+            string post = c.postfix;
+            string key = c.keyword;
+            Form2 frm = new Form2(pre,post,key);
+
             frm.Show();
 
         }

@@ -9,30 +9,63 @@ using System.Text.RegularExpressions;
 namespace Textmining
 {
     class Class1
+        
     {
-        public int SearchWord(string word, string path)
+       public string postfix="";
+       public string prefix= "";
+        public string totaltext;
+        public string keyword = "";
+        public int num;
+        
+        public int SearchWord(string word)
         {
-            string mydocc=mydoc(path);
             
-            int no = Regex.Matches(mydocc, word,RegexOptions.IgnoreCase).Count;
+            
+            int no = Regex.Matches(totaltext, word,RegexOptions.IgnoreCase).Count;
+            num = no;
+            keyword = word;
             return no;
             
+            
+            
         }
-        private string mydoc(string path)
+      
+        public string gettotaltext()
+        {
+            return totaltext;
+        }
+        public void mydoc(string path)
         {
             Microsoft.Office.Interop.Word.Application words = new Microsoft.Office.Interop.Word.Application();
             object miss = System.Reflection.Missing.Value;
             object readOnly = true;
             Microsoft.Office.Interop.Word.Document docs = words.Documents.Open(path);
-            string totaltext = "";
+            string totaltextt = "";
             for (int i = 0; i < docs.Paragraphs.Count; i++)
             {
-                totaltext += " \r\n " + docs.Paragraphs[i + 1].Range.Text.ToString();
+                totaltextt += " \r\n " + docs.Paragraphs[i + 1].Range.Text.ToString();
             }
-            Console.WriteLine(totaltext);
             docs.Close();
             words.Quit();
-            return totaltext;
+            totaltext = totaltextt;
+        }
+        public void getsemantics()
+        {
+            string total = gettotaltext();
+            int number = num;
+            string pre="", post="";
+            string[] neww = total.Split(' ', '.', ',');
+            for (int i = 0; i < number; i++)
+            {
+                int ind=Array.IndexOf(neww,keyword);
+                pre += neww[ind - 1]+"\r\n";
+                post += neww[ind + 1] + "\n\r";
+                neww[ind] = "";
+
+            }
+            prefix = pre;
+            postfix = post;
+
         }
 
     }
