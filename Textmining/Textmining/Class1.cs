@@ -21,7 +21,7 @@ namespace Textmining
         {
             
             
-            int no = Regex.Matches(totaltext, word,RegexOptions.IgnoreCase).Count;
+            int no = Regex.Matches(totaltext, word).Count;
             num = no;
             keyword = word;
             return no;
@@ -54,15 +54,28 @@ namespace Textmining
             string total = gettotaltext();
             int number = num;
             string pre="", post="";
-            string[] neww = total.Split(' ', '.', ',');
-            for (int i = 0; i < number; i++)
-            {
-                int ind=Array.IndexOf(neww,keyword);
-                pre += neww[ind - 1]+"\r\n";
-                post += neww[ind + 1] + "\n\r";
-                neww[ind] = "";
+            string[] neww = total.Split(' ', '.', ',','\'');
+            
+                for (int i = 0; i < number; i++)
+                {
+                    try
+                    {
+                        int ind = Array.IndexOf(neww, keyword);
+                        string a = neww[ind - 1];
+                        string b = neww[ind + 1];
+                        pre += a + "\r\n";
+                        post += b + "\r\n";
+                        neww[ind] = "";
+                    }
+                    catch(Exception ex)
+                    {
+                        System.Windows.Forms.MessageBox.Show(ex.Message);
 
+                    }
+
+                
             }
+        
             prefix = pre;
             postfix = post;
 

@@ -22,6 +22,7 @@ namespace Textmining
         }
         public Form2(string pre,string post,string key)
         {
+            InitializeComponent();
             prefix = pre;
             postfix = post;
             keyword = key;
