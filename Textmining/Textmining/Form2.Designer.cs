@@ -50,7 +50,7 @@
             // key
             // 
             this.key.BackColor = System.Drawing.SystemColors.Info;
-            this.key.Location = new System.Drawing.Point(165, 48);
+            this.key.Location = new System.Drawing.Point(141, 48);
             this.key.Multiline = true;
             this.key.Name = "key";
             this.key.ReadOnly = true;
@@ -61,7 +61,7 @@
             // post
             // 
             this.post.BackColor = System.Drawing.SystemColors.Info;
-            this.post.Location = new System.Drawing.Point(298, 48);
+            this.post.Location = new System.Drawing.Point(252, 48);
             this.post.Multiline = true;
             this.post.Name = "post";
             this.post.ReadOnly = true;

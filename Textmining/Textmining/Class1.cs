@@ -69,7 +69,7 @@ namespace Textmining
                     }
                     catch(Exception ex)
                     {
-                        System.Windows.Forms.MessageBox.Show(ex.Message);
+                        //System.Windows.Forms.MessageBox.Show(ex.Message);
 
                     }
 
