@@ -12,7 +12,7 @@ namespace Textmining
 {
     public partial class Form2 : Form
     {
-        string prefix, postfix, keyword;
+        string prefix, postfix, keyword,mykeys;
         
         
         public Form2()
@@ -20,12 +20,14 @@ namespace Textmining
             InitializeComponent();
             
         }
-        public Form2(string pre,string post,string key)
+        public Form2(string pre,string post,string key,string keys)
         {
             InitializeComponent();
             prefix = pre;
             postfix = post;
             keyword = key;
+            mykeys = keys;
+            //mergee = merge;
         }
       
  
@@ -46,5 +48,11 @@ namespace Textmining
             post.Text = postfix;
             
         }
+
+        //private void button4_Click(object sender, EventArgs e)
+        //{
+        //    mergebox.Text = mergee;
+
+        //}
     }
 }

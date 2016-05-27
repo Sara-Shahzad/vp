@@ -55,15 +55,22 @@ namespace Textmining
         private void button1_Click(object sender, EventArgs e)
         {
             String a = searchbox.Text;
-            int num = c.SearchWord(a);
-            if(num>0)
+            try
             {
-                string xyz = "Found...\n\n" + "number of times the KeyWord Appeared in the document is " + num+"...";
-                Result.Text = xyz;
+                int num = c.SearchWord(a);
+                if (num > 0)
+                {
+                    string xyz = "Found...\n\n" + "number of times the KeyWord Appeared in the document is " + num + "...";
+                    Result.Text = xyz;
+                }
+                else
+                {
+                    Result.Text = "Not Found.....\n";
+                }
             }
-            else
+            catch(Exception ee)
             {
-                Result.Text = "Not Found.....\n";
+                MessageBox.Show("load a document First");
             }
             
         }
@@ -80,13 +87,21 @@ namespace Textmining
 
         private void button2_Click(object sender, EventArgs e)
         {
-            c.getsemantics();
-            string pre = c.prefix;
-            string post = c.postfix;
-            string key = c.keyword;
-            Form2 frm = new Form2(pre,post,key);
+            try
+            {
+                c.getsemantics();
+                string pre = c.prefix;
+                string post = c.postfix;
+                string key = c.keyword;
+                string keys = c.mykeys;
+                Form2 frm = new Form2(pre, post, key,keys);
 
-            frm.Show();
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+               MessageBox.Show("Something went wrong load a file or enter a search keyword");
+            }
 
         }
     }
